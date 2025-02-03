@@ -40,5 +40,10 @@ def main():
         # limit the frame rate to 60 FPS
         dt = timer.tick(60) / 1000
 
+        for obj in asteroids:
+            if obj.collision(player1):
+                print("Game over!")
+                return
+
 if __name__ == "__main__":
     main()
